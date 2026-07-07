@@ -1,23 +1,9 @@
-//Arrays......
+//Arrays........
 
-//Creating and accessing the array......
+//Creating and accessing array.........
 
-let testUsers = ["karan", "roshan", "somesh"];
+let names = ["umesh","mahesh","ganesh","srujan"];
 
-console.log(testUsers[5])
+console.log("accessing array value of Index : ", names[2]);
 
-// testUsers.push["umesh"]
-
-console.log(testUsers.length)
-
-
-//Adding failed Test cases into the array
-
-let failedTestCases = [];
-
-failedTestCases.push("abc");
-
-console.log(failedTestCases);
-
-
-
+console.log(names.length);
