@@ -43,3 +43,38 @@ Object.keys(users).forEach((key)=>{
 
     console.log(key + " : " + users[key]);
 });
+
+
+
+let loginResponse = {
+  status: 200,
+  message: "Login successful",
+  data: {
+    userId: 42,
+    username: "deepak_qa",
+    role: "admin",
+    token: "xyz789abc"
+  }
+};
+
+// Print the status and message directly from loginResponse...
+
+Object.keys(loginResponse).forEach((key)=>{
+
+    console.log(key + " : " + loginResponse[key]);
+
+});
+
+//Print the username and token from inside the nested data object.
+
+console.log("username : ", loginResponse.data.username);
+console.log("token : ", loginResponse.data.token);
+
+
+//if/else — check status === 200 AND data.role === "admin" → print "Access granted" or "Access denied".
+
+    loginResponse.data.forEach((key)=>{
+    loginResponse.status === 200 && loginResponse.data.role === "admin" ? "Access granted" : "Access denied";
+    });
+
+    console.log(loginResponse);
