@@ -221,4 +221,4 @@ console.log("___________________")
 
 //if/else — check status === 200 AND data.role === "admin" → print "Access granted" or "Access denied".
 
-           console.log(loginResponse.status === 200 && loginResponse.data.role === "admin" ? "Access granted" : "Access denied");
+console.log(loginResponse.status === 200 && loginResponse.data.role === "admin" ? "Access granted" : "Access denied");
