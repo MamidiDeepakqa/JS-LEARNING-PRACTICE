@@ -57,46 +57,4 @@ let orderStatuses = apiResponse.data.orders.map((order)=>{
   return order.orderStatus;
 });
 
-console.log(orderStatuses)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let deliveredOrders = apiResponse.data.orders.filter((orders)=>{
-
-//   return orders.orderStatus === "delivered";
-
-// });
-
-// deliveredOrders.forEach((filteredOrders) =>{
-
-// console.log("Delivered : " + filteredOrders.orderId + " - " + filteredOrders.item + " - " + filteredOrders.amount);
-
-// });
+console.log(orderStatuses);
