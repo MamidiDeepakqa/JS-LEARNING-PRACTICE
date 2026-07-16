@@ -134,11 +134,11 @@ bankingSystem.data.transactions.forEach((transactionRecords)=>{
 let path = bankingSystem.data.loans;
 
 if(path.hasActiveLoan === true && path.isPaid === false && path.monthlyEMI > 10000){
-    return "High EMI active loan detected - review required";
+    console.log("High EMI active loan detected - review required");
 }else if(path.hasActiveLoan === true && path.isPaid === false){
-    return "Active loan - regular EMI";
+    console.log("Active loan - regular EMI");
 }else if(path.isPaid === true){
-    return "Loan cleared";
+    console.log("Loan cleared");
 }else{
-    return "No active loans";
+    console.log("No active loans");
 }
