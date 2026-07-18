@@ -29,24 +29,53 @@
 
 // loadPage();
 
-async function testBankingAPI() {
+// async function testBankingAPI() {
 
-    console.log("Step 1: Fetching user data from API...");
+//     console.log("Step 1: Fetching user data from API...");
 
-    let response = await fetch("https://jsonplaceholder.typicode.com/users/1");
-    let data = await response.json();
+//     let response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+//     let data = await response.json();
 
-    console.log("Step 2: Data received - checking details");
-    console.log("User ID:", data.id);
-    console.log("Name:", data.name);
-    console.log("Email:", data.email);
+//     console.log("Step 2: Data received - checking details");
+//     console.log("User ID:", data.id);
+//     console.log("Name:", data.name);
+//     console.log("Email:", data.email);
 
-    console.log("Step 3: Validating response");
-    if (data.id === 1 && data.name) {
-        console.log("API Test PASSED");
+//     console.log("Step 3: Validating response");
+//     if (data.id === 1 && data.name) {
+//         console.log("API Test PASSED");
+//     } else {
+//         console.log("API Test FAILED");
+//     }
+// }
+
+// testBankingAPI();
+
+
+
+async function getDetails() {
+
+    const response = await fetch("https://restful-booker.herokuapp.com/booking/4");
+
+    if (response.status === 200) {
+
+        const convertedResponse = await response.json();
+
+        console.log(convertedResponse);
+
+        console.log("firstname : ", convertedResponse.firstname);
+        console.log("lastname : ", convertedResponse.lastname);
+        console.log("checkIn Date : ", convertedResponse.bookingdates.checkin);
+
+        if (convertedResponse.depositpaid === true) {
+            console.log("Deposit confirmed");
+        } else {
+            console.log("Deposit pending");
+        }
     } else {
-        console.log("API Test FAILED");
+        console.log("API failed : " + response.status);
     }
+
 }
 
-testBankingAPI();
+getDetails();
