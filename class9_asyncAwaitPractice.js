@@ -2,7 +2,7 @@
 async function getDetails() {
 
     const response = await fetch("https://restful-booker.herokuapp.com/booking/4");
-
+    
     if (response.status === 200) {
 
         const convertedResponse = await response.json();
