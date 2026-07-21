@@ -12,4 +12,3 @@ let tests = [
 tests.forEach((test)=>{
     console.log(formatResult(test.name, checkStatus(test.status)));
 });
-
