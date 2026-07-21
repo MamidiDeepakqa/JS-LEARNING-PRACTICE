@@ -1,0 +1,21 @@
+{
+  "name": "js-learning-practice",
+  "version": "1.0.0",
+  "description": "JavaScript testing practice",
+  "main": "runTests.js",
+  "scripts": {
+    "test": "node runTests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MamidiDeepakqa/JS-LEARNING-PRACTICE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MamidiDeepakqa/JS-LEARNING-PRACTICE/issues"
+  },
+  "homepage": "https://github.com/MamidiDeepakqa/JS-LEARNING-PRACTICE#readme"
+}
