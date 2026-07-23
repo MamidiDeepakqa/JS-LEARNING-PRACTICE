@@ -45,3 +45,4 @@ function safeParseJSON(jsonString){
 safeParseJSON('{"name":"Deepak","role":"QA"}');  // valid
 safeParseJSON("Not Found");                        // invalid
 safeParseJSON('{"name":"Deepak"');                 // malformed
+safeParseJSON('{"56h89"');                 // malformed
