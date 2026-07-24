@@ -222,5 +222,4 @@ async function testPostAPI() {
         console.log("API test complete");
     }
 }
-
 testPostAPI();
