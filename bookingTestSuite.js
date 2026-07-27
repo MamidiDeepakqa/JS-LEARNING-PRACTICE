@@ -76,7 +76,7 @@ async function testBooking(bookingId) {
             notFound++;
             console.log(`NOT FOUND : ${bookingId}`);
         } else {
-            console.log("NOT FOUND: ", bookingId);
+            console.log(`NOT FOUND: ${bookingId}`);
         }
     } catch (error) {
         console.log(error.message);
@@ -98,3 +98,4 @@ async function runTestSuite() {
     console.log("==================================");
 }
 export { runTestSuite };
+// runTestSuite();
