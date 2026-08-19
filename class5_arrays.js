@@ -36,6 +36,7 @@ statusCodes.forEach((code)=>{
 //.map() --Transform items to something new....
 
 let stateCode = [400,200,404,500];
+
 let codes = stateCode.map((code)=>{
     return code === 200 ? "PASS" : "FAIL";
 });
@@ -47,14 +48,10 @@ console.log(codes);
 let allCodes = [200, 404, 500, 201, 403];
 
 let matchedValues = allCodes.filter((code)=>{
-
     return code != 404 && code != 403;
-
 })
 
 console.log("Matched values are : ",matchedValues);
-
-
 
 let testResults = [
   { name: "login_test", status: 200 },

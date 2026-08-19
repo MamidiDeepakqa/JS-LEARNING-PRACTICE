@@ -1,9 +1,9 @@
 //Objects........
 
-let user ={
-    name : "test user",
-    role : "qa",
-    location : "hyd"
+let user = {
+  name: "test user",
+  role: "qa",
+  location: "hyd"
 }
 
 //Object is a collection of key-value pair.
@@ -39,9 +39,9 @@ let users = {
   isLoggedIn: true
 };
 
-Object.keys(users).forEach((key)=>{
+Object.keys(users).forEach((key) => {
 
-    console.log(key + " : " + users[key]);
+  console.log(key + " : " + users[key]);
 });
 
 
@@ -59,9 +59,9 @@ let loginResponse = {
 
 // Print the status and message directly from loginResponse...
 
-Object.keys(loginResponse).forEach((key)=>{
+Object.keys(loginResponse).forEach((key) => {
 
-    console.log(key + " : " + loginResponse[key]);
+  console.log(key + " : " + loginResponse[key]);
 
 });
 
@@ -73,8 +73,8 @@ console.log("token : ", loginResponse.data.token);
 
 //if/else — check status === 200 AND data.role === "admin" → print "Access granted" or "Access denied".
 
-    loginResponse.data.forEach((key)=>{
-    loginResponse.status === 200 && loginResponse.data.role === "admin" ? "Access granted" : "Access denied";
-    });
+loginResponse.data.forEach((key) => {
+  let access = loginResponse.status === 200 && loginResponse.data.role === "admin" ? "Access granted" : "Access denied";
+});
 
-    console.log(loginResponse);
+console.log(access);

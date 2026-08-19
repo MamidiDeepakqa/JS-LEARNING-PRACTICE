@@ -42,7 +42,8 @@ for (let item of apiEndpoints) {
         console.log("SLOW: " + item.endpoint + " - " + item.responseTime + "ms");
     }
 }
-console.log("________________________")
+console.log("________________________");
+
 //Task : 4 Functions..
 const getResponseLabel = (endpoint, responseTime) => {
     if (responseTime < 1000) {
