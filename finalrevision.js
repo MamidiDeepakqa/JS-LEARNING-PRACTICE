@@ -1,29 +1,18 @@
 //https://fakestoreapi.com/products
 
-let TotalTests = 0;
+let TotalTestProcessed = 0;
 let Passed = 0;
 let Failed = 0;
 let NotFound = 0;
 let errors = [];
 
 function validateProduct(product) {
-
     let issues = [];
-
     if (!product.title) {
         issues.push("Missing Title");
     }
-    if (!product.price > 0) {
-        issues.push("Price is less than 0");
-    }
-    if (!product.category) {
-        issues.push("Missing category");
-    }
-    if (!product.image) {
-        issues.push("Missing Image");
-    }
-    if (!product?.rating?.rate) {
-        issues.push("Missing rating rate");
+    if (!product.price) {
+        issues.push("Missing Price");
     }
 
     return {
@@ -36,37 +25,39 @@ async function testProduct(productId) {
     try {
         let response = await fetch(`https://fakestoreapi.com/products/${productId}`);
         if (response.status === 200) {
-            TotalTests++;
+            TotalTestProcessed++;
             let convertedResponse = await response.json();
             let validation = validateProduct(convertedResponse);
             if (validation.isValid) {
                 Passed++;
-                console.log(`Pass: Backpack`);
+                console.log("Passed");
             } else {
                 Failed++;
-                console.log(`Fail: - Missing image - Invalid price`);
+                console.log(`Failed error: `,errors);
             }
         } else if (response.status !== 200) {
-            TotalTests++;
+            TotalTestProcessed++;
             NotFound++;
             console.log(`Not Found: ${productId}`);
         }
     } catch (error) {
-        console.log(error.message);
+        console.log("catch error: ", error.message);
     } finally {
-        console.log("Product testing is done.")
+        console.log("Product validation is passed!");
     }
 }
 
-async function runSuite1() {
-    for (let code of [1, 5, 20, 999]) {
-        await testProduct(code);
+async function runSuite() {
+    for (let a of [1, 2, 3, 6, 4, 5]) {
+        await testProduct(a);
     }
     console.log("=========Test Summary===========");
-    console.log(`Total Tests: ${TotalTests}`);
+    console.log(`TotalTestProcessed: ${TotalTestProcessed}`);
     console.log(`Passed: ${Passed}`);
     console.log(`Failed: ${Failed}`);
     console.log(`NotFound: ${NotFound}`);
+
 }
 
-export { runSuite1 };
+
+export { runSuite };

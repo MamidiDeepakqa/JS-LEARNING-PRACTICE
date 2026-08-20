@@ -208,7 +208,6 @@ console.log("Topics 7-10 in one combined task:");
 async function testPostAPI() {
     try {
         let response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-
         if (response.status === 200) {
             let JSONResponse = await response.json();
             console.log("Title: ", JSONResponse.title);
