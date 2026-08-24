@@ -113,7 +113,7 @@ await page.waitForURL('www.google.com');
 await page.waitForSelector('text=test');
 
 //Getting text and values
-let textvalue = await page.locator('#element').textContext();
+let textvalue = await page.locator('#element').textContent();
 let inputValue = await page.locator('.element').inputValue();
 
 //Assertions (expect) — checking results
