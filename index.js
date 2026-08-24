@@ -3,7 +3,7 @@
 // import { runSuite1 } from './bookingTestSuite2.js';
 // import { runSuite } from './finalrevision.js';
 // import { runSuiteQA } from './finalRevision1.js';
-import { runSuite } from `./finalRevision2.js`;
+import { runSuite } from './finalRevision2.js';
 
 // runTestSuite();
 

@@ -63,4 +63,4 @@ async function runSuite() {
 
 }
 
-runSuite();
+export { runSuite };
